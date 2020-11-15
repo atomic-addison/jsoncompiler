@@ -1,0 +1,52 @@
+{
+	"variables" : [
+		{
+			"name" : "input_test"
+		}
+	],
+	"operations" : [
+		{
+			"type" : "output",
+			"values" : [
+				"Hello", " world", "!"
+			]
+		},
+		{
+			"type" : "output",
+			"values" : [
+				"I", " like", " dogs."
+			]
+		},
+		{
+			"type" : "output",
+			"values" : [
+				"Cats are okay too."
+			]
+		},
+		{
+			"type" : "input",
+			"variable" : "input_test",
+			"prompt" : "What kind of pets do you like?"
+		},
+		{
+			"type" : "output",
+			"values" : [
+				"You like ${input_test}."
+			]
+		},
+		{
+			"type" : "loop",
+			"repeats" : 5,
+			"operations" : [
+				{
+					"type" : "output",
+					"values" : [
+						{
+							"variable" : "input_test"
+						}
+					]
+				}
+			]
+		}
+	]
+}
